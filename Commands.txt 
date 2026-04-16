@@ -1,0 +1,12 @@
+ kubectl autoscale deployment app --cpu-percent=50 --min=1 --max=8 (auto scaling)
+ kubectl scale deployment app --replicas=5 (manual scaling )
+
+minikube start
+
+
+ kubectl get pods
+ kubectl get deployment
+ kubectl get svc
+ kubectl get ingress
+
+
