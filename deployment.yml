@@ -36,7 +36,7 @@ spec:
             - configMapRef :
                 name : app-config
             - secretRef :
-                name : app-secret
+                name : app-secrets
 
 # attacted volumes
           volumeMounts :
@@ -45,4 +45,4 @@ spec:
           volume :
              - name : storage
                persistentVolumeClaim :
-                 claimName : app-volume
+                 claimName : app-volumes
