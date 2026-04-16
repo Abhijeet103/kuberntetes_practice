@@ -31,9 +31,18 @@ spec:
               port: 80
             initialDelaySeconds: 10
             periodSeconds: 2
-
+# using env from config and secrets
           envFrom :
             - configMapRef :
                 name : app-config
             - secretRef :
                 name : app-secret
+
+# attacted volumes
+          volumeMounts :
+            - mountPath : /data
+              name : storage
+          volume :
+             - name : storage
+               persistentVolumeClaim :
+                 claimName : app-volume
